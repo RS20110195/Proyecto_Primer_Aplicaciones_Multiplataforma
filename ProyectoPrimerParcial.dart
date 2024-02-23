@@ -31,7 +31,7 @@ void Menu() {
         print("Opcion 2");
         break;
       case 3:
-        print("Opcion 3");
+        print(Meta());
         break;
       case 0:
         print('Haz Salido del Sistema Vuelva Pronto *+*');
@@ -109,4 +109,17 @@ void Registro() {
 
 double Saldo1() {
   return SaldoActual;
+}
+
+String Meta() {
+  print("Cuanto es tu meta financiera: ");
+  String auxMeta = stdin.readLineSync().toString();
+  double meta = double.parse('$auxMeta');
+  if (meta <= SaldoActual) {
+    return "Haz Alcanzado Tu Meta";
+  } else {
+    double Porcentaje = ((100 / meta) * SaldoActual);
+
+    return "Vas por un Camino del $Porcentaje%";
+  }
 }
