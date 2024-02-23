@@ -5,11 +5,10 @@ main() {
 }
 
 //Variables
-List<String> registro = [];
-List<double> monto = [];
-List<String> descripcion = [];
+List<String> registro = []; //Tipo de Registro
+List<double> monto = []; //Monto de Dinero sea positivo o negativo
+List<String> descripcion = []; //Descripcion del registro
 double SaldoActual = 0;
-double MoneyIngresado = 0;
 
 void Menu() {
   int option;
@@ -60,7 +59,7 @@ void Registro() {
         print('Saldo Actual: $SaldoActual');
         print("Cuanto Dinero Quieres Ingresar: ");
         String auxMoney = stdin.readLineSync().toString();
-        MoneyIngresado = double.parse('$auxMoney');
+        double MoneyIngresado = double.parse('$auxMoney');
         if (MoneyIngresado < 0) {
         } else {
           SaldoActual += MoneyIngresado;
@@ -77,7 +76,7 @@ void Registro() {
         print('Saldo Actual: $SaldoActual');
         print("Cuanto Dinero Quieres Retirar: ");
         String aux = stdin.readLineSync().toString();
-        MoneyIngresado = double.parse('$aux');
+        double MoneyIngresado = double.parse('$aux');
         if (MoneyIngresado <= SaldoActual) {
           SaldoActual -= MoneyIngresado;
           monto.add(MoneyIngresado * (-1));
@@ -89,14 +88,14 @@ void Registro() {
         } else {
           print('No puedes Retirar mas del Saldo Actual');
         }
-      case 3:
+      /*case 3:
         print("Impresion de Registros");
         for (var i = 0; i < registro.length; i++) {
           print("Tipo de Registro: " + registro[i]);
           print("Descripcion: " + descripcion[i]);
           print("Monto:  " + monto[i].toString());
         }
-        break;
+        break;*/
       case 0:
         print('Haz Regresado al Menu Principal');
         break;
