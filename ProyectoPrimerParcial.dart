@@ -8,8 +8,8 @@ main() {
 List<String> registro = []; //Tipo de Registro
 List<double> monto = []; //Monto de Dinero sea positivo o negativo
 List<String> descripcion = []; //Descripcion del registro
-double SaldoActual = 0;
-double presupuestoBase = 0;
+double SaldoActual = 0; //Saldo Actual
+double presupuestoBase = 0; // Presupuesto Bae
 double costoMeta = 0;
 String descripcionMeta = '';
 double saldoCuenta = 0;
@@ -92,14 +92,6 @@ void Registro() {
         } else {
           print('No puedes Retirar mas del Saldo Actual');
         }
-      /*case 3:
-        print("Impresion de Registros");
-        for (var i = 0; i < registro.length; i++) {
-          print("Tipo de Registro: " + registro[i]);
-          print("Descripcion: " + descripcion[i]);
-          print("Monto:  " + monto[i].toString());
-        }
-        break;*/
       case 0:
         print('Haz Regresado al Menu Principal');
         break;
@@ -114,6 +106,7 @@ double Saldo1() {
   return SaldoActual;
 }
 
+//Seguimiento del estado Financiero
 void Seguimiento_Estado_Financiero() {
   int optionSEF;
   do {
@@ -173,7 +166,6 @@ void Seguimiento_Estado_Financiero() {
 }
 
 //----------------------------------------------------------
-
 void MetaPresupuesto() {
   int optionSEF;
   do {
