@@ -160,6 +160,7 @@ void Seguimiento_Estado_Financiero() {
           print("Monto: \$${monto[i].abs().toStringAsFixed(2)}");
           print("");
         }
+        print("Su saldo actual es de: $SaldoActual MXN");
         break;
       case 0:
         print('Haz Regresado al Menu Principal');
